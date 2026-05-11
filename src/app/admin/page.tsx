@@ -4,6 +4,7 @@ import { createClient } from '@/lib/supabase'
 import type { CustomerInvite, Enquiry, Contractor, InviteStatus, EnquiryStatus } from '@/types'
 
 const SPECIALTIES = ['OVID Inspector','Condition and Suitability Inspections','Marine Operation Manager or Superintendent','Subsea','Subsea Crane','ROV Operations','ROV Compliance','Offshore Client Representative','Impartial Marine Representation','Marine Casualty','High Risk Training - Offshore (RIIWHS202E/MSMWHS2127/RIIWHS204E/HLTAID011/HLTAID015/UETDRMP018/MSMSS00017)','Network Storm Testing']
+type AdminTab = 'overview' | 'contractors' | 'customers' | 'enquiries'
 
 export default function AdminPage() {
   const supabase = createClient()
