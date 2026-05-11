@@ -31,7 +31,7 @@ export default function ContractorPage() {
   async function loadContractor() {
     const { data: { user } } = await supabase.auth.getUser()
     if (!user) return
-    const { data } = await supabase.from('contractors').select('id,alias,specialty').eq('profile_id', user.id).single()
+    const { data } = await supabase.from('contractors').select('*').eq('profile_id', user.id).single()
     if (data) setContractor(data)
   }
 
